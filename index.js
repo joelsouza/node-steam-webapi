@@ -276,6 +276,7 @@ function buildSteamWrapperMethod(interfaceName, funcName, defaultVersion, httpMe
 
 // All we need to get started, we will build and attach the rest later (down below)
 buildSteamWrapperMethod('ISteamWebAPIUtil', 'GetSupportedAPIList', 1, "GET", [], ['key']);
+buildSteamWrapperMethod('ISteamUser', 'GetPlayerSummaries', 2, "GET", ['steamids'], ['key']);
 
 // Retrieve all Steam WebAPI http methods and add to our class prototype
 function retrieveSteamAPIMethods(key, callback) {
